@@ -4,7 +4,7 @@
 #
 Name     : pyecobee
 Version  : 31f950ee3a104c4ab5bdd7cb788b3d06076ccced
-Release  : 7
+Release  : 8
 URL      : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Source0  : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Summary  : No detailed summary available
