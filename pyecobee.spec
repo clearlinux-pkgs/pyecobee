@@ -4,7 +4,7 @@
 #
 Name     : pyecobee
 Version  : 31f950ee3a104c4ab5bdd7cb788b3d06076ccced
-Release  : 8
+Release  : 9
 URL      : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Source0  : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Summary  : No detailed summary available
@@ -54,6 +54,7 @@ python3 components for the pyecobee package.
 
 %prep
 %setup -q -n Pyecobee-31f950ee3a104c4ab5bdd7cb788b3d06076ccced
+cd %{_builddir}/Pyecobee-31f950ee3a104c4ab5bdd7cb788b3d06076ccced
 %patch1 -p1
 
 %build
@@ -61,7 +62,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571083009
+export SOURCE_DATE_EPOCH=1583206440
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
