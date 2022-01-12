@@ -4,22 +4,20 @@
 #
 Name     : pyecobee
 Version  : 31f950ee3a104c4ab5bdd7cb788b3d06076ccced
-Release  : 22
+Release  : 23
 URL      : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Source0  : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
-Summary  : No detailed summary available
+Summary  : A Python implementation of the ecobee API
 Group    : Development/Tools
 License  : MIT
 Requires: pyecobee-license = %{version}-%{release}
 Requires: pyecobee-python = %{version}-%{release}
 Requires: pyecobee-python3 = %{version}-%{release}
-Requires: pytz
-Requires: requests
-Requires: six
 BuildRequires : buildreq-distutils3
-BuildRequires : pytz
-BuildRequires : requests
-BuildRequires : six
+BuildRequires : pypi(enum34)
+BuildRequires : pypi(pytz)
+BuildRequires : pypi(requests)
+BuildRequires : pypi(six)
 Patch1: 0001-Updated-runtime-object-from-API-page.patch
 
 %description
@@ -47,6 +45,11 @@ python components for the pyecobee package.
 Summary: python3 components for the pyecobee package.
 Group: Default
 Requires: python3-core
+Provides: pypi(pyecobee)
+Requires: pypi(enum34)
+Requires: pypi(pytz)
+Requires: pypi(requests)
+Requires: pypi(six)
 
 %description python3
 python3 components for the pyecobee package.
@@ -62,12 +65,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583206440
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1641948429
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
