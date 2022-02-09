@@ -4,7 +4,7 @@
 #
 Name     : pyecobee
 Version  : 31f950ee3a104c4ab5bdd7cb788b3d06076ccced
-Release  : 23
+Release  : 24
 URL      : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Source0  : https://github.com/sfanous/Pyecobee/archive/31f950ee3a104c4ab5bdd7cb788b3d06076ccced.tar.gz
 Summary  : A Python implementation of the ecobee API
@@ -14,7 +14,6 @@ Requires: pyecobee-license = %{version}-%{release}
 Requires: pyecobee-python = %{version}-%{release}
 Requires: pyecobee-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(enum34)
 BuildRequires : pypi(pytz)
 BuildRequires : pypi(requests)
 BuildRequires : pypi(six)
@@ -46,7 +45,6 @@ Summary: python3 components for the pyecobee package.
 Group: Default
 Requires: python3-core
 Provides: pypi(pyecobee)
-Requires: pypi(enum34)
 Requires: pypi(pytz)
 Requires: pypi(requests)
 Requires: pypi(six)
@@ -65,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641948429
+export SOURCE_DATE_EPOCH=1644433879
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
